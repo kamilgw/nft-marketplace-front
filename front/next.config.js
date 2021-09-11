@@ -1,5 +1,8 @@
 const path = require('path')
 const withAntdLess = require('next-plugin-antd-less');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const config = {
   // optional
@@ -32,4 +35,4 @@ const config = {
   }
 };
 
-module.exports = withAntdLess((config));
+module.exports = withBundleAnalyzer(withAntdLess((config)));
