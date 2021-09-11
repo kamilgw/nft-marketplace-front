@@ -14,6 +14,6 @@ USER zti
 RUN yarn install \
  && yarn build
 
-EXPOSE 80
+EXPOSE 3000
 
-ENTRYPOINT ["yarn", "dev"]
+ENTRYPOINT ["yarn", "start"]
