@@ -1,0 +1,6 @@
+query wallet {
+    wallet{
+        ownerId
+        balance
+    }
+}

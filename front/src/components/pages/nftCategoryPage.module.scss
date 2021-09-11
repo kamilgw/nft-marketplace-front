@@ -1,0 +1,21 @@
+.paginationMenu {
+  width: 100px;
+}
+
+.sortMenu {
+  width: 140px;
+}
+
+@media (min-width: 992px) {
+  .filterButton {
+    display: none;
+  }
+}
+
+.refreshButton {
+  margin-left: 0.5rem;
+}
+
+.paginationDropdown {
+  margin-left: 0.5rem;
+}

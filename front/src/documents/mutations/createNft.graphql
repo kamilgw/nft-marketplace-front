@@ -1,0 +1,3 @@
+mutation createNft($name: String!, $assetUrl: String!, $description: String! ) {
+    createNft(name: $name, assetUrl: $assetUrl, description: $description)
+}

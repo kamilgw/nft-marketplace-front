@@ -1,0 +1,18 @@
+.sideMenu {
+  position: sticky;
+  top: 90px;
+  min-width: 300px !important;
+  z-index: 1;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.content{
+  margin-top: 90px;
+}
+
+.centered-content {
+  margin-left: 400px;
+}

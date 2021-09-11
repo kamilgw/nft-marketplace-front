@@ -1,0 +1,7 @@
+query userInfo($username: String) {
+    userByName(username: $username){
+        id
+        username
+        email
+    }
+}

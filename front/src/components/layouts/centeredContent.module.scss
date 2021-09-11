@@ -1,0 +1,20 @@
+@import 'mediaQueries';
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    padding: 0 20px;
+  }
+
+  @include lt-md {
+    padding: 0 10px;
+  }
+
+  @include lt-sm {
+    padding: 0 5px;
+  }
+}

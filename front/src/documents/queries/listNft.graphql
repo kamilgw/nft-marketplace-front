@@ -1,0 +1,30 @@
+query listNft($first: Int!, $after: String, $ownerId: ID, $favouritedBy: ID) {
+    nfts(first: $first, after: $after, ownerId: $ownerId, favouritedBy: $favouritedBy) {
+        edges {
+            node {
+                id
+                name
+                assetUrl
+                description
+                ownerName
+                sale {
+                    id
+                    price
+                    ownerId
+                    timeAdded
+                }
+                nftIssuer {
+                    id
+                    name
+                    avatarUrl
+                }
+            }
+        }
+        pageInfo {
+            endCursor
+            startCursor
+            hasNextPage
+            hasPreviousPage
+        }
+    }
+}

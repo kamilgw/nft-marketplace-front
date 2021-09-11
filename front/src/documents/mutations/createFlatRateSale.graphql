@@ -1,0 +1,3 @@
+mutation createFlatRateSale($amount: Float!, $nftId: ID!) {
+    createFlatSale(amount: $amount, nftId: $nftId)
+}

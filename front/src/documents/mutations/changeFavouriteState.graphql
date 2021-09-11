@@ -1,0 +1,3 @@
+mutation changeFavouriteState($like: Boolean!, $nftId: ID!){
+    changeFavouriteState(like: $like, nftId: $nftId)
+}

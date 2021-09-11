@@ -1,0 +1,26 @@
+query nft($id: ID!) {
+    nft(id: $id) {
+        id
+        name
+        assetUrl
+        description
+        ownerName
+        sale {
+            id
+            price
+            ownerId
+            timeAdded
+        }
+        nftIssuer {
+            id
+            name
+            avatarUrl
+        }
+        priceHistory{
+            id
+            price
+            ownerId
+            purchasedOn
+        }
+    }
+}
