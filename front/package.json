@@ -23,6 +23,7 @@
     "@lay2/pw-core": "^0.3.22",
     "@sentry/nextjs": "^6.8.0",
     "@types/date-fns": "^2.6.0",
+    "@zeit/next-sass": "^1.0.1",
     "antd": "^4.15.6",
     "aws-sdk": "^2.987.0",
     "axios": "^0.21.1",
