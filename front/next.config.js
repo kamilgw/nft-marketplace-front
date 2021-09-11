@@ -1,5 +1,6 @@
 const path = require('path')
 const withzeis = require('@zeit/next-sass');
+const withless = require('@zeit/next-less');
 const withAntdLess = require('next-plugin-antd-less');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
