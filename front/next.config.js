@@ -1,24 +1,19 @@
 const path = require('path')
-const withzeis = require('@zeit/next-sass');
-const withless = require('@zeit/next-less');
+const withPlugins = require('next-compose-plugins');
 const withAntdLess = require('next-plugin-antd-less');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
-const config = {
+const pluginAntdLess = withAntdLess({
   // optional
   modifyVars: { '@primary-color': '#04f' },
   // optional
   // lessVarsFilePath: './src/styles/variables.less',
   // optional
-  lessVarsFilePathAppendToEndOfContent: false,
+  // lessVarsFilePathAppendToEndOfContent: false,
   // optional https://github.com/webpack-contrib/css-loader#object
-  cssLoaderOptions: {},
-
-  webpack(config) {
-    return config;
-  },
+  // cssLoaderOptions: {},
 
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")]
@@ -35,6 +30,18 @@ const config = {
     LOGOUT_URL: process.env.LOGOUT_URL,
     ENVIRONMENT: process.env.ENVIRONMENT,
   }
-};
+});
 
-module.exports = withBundleAnalyzer(withAntdLess((config)));
+
+module.exports = withPlugins([[pluginAntdLess]], {
+  webpack(config) {
+    return config;
+  },
+  // images: {
+  //   disableStaticImages: true,
+  // },
+  // NextFuture
+  // future: {
+  //   webpack5: true,
+  // },
+});
