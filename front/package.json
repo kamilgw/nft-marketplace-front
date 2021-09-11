@@ -24,7 +24,10 @@
     "@sentry/nextjs": "^6.8.0",
     "@types/date-fns": "^2.6.0",
     "antd": "^4.15.6",
+    "aws-sdk": "^2.987.0",
     "axios": "^0.21.1",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "graphql": "^15.5.2",
     "jwt-decode": "^3.1.2",
     "next": "^10.2.2",
@@ -33,7 +36,8 @@
     "react-cookie": "^4.0.3",
     "react-dom": "^17.0.2",
     "react-use": "^17.2.4",
-    "recharts": "^2.0.9"
+    "recharts": "^2.0.9",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
