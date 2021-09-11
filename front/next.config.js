@@ -1,5 +1,10 @@
 const path = require('path')
+const withzeis = require('@zeit/next-sass');
 const withAntdLess = require('next-plugin-antd-less');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const config = {
   // optional
   modifyVars: { '@primary-color': '#04f' },
@@ -31,4 +36,4 @@ const config = {
   }
 };
 
-module.exports = withAntdLess((config));
+module.exports = withBundleAnalyzer(withAntdLess((config)));
