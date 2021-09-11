@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint pages src --cache",
     "lint:fix": "yarn lint --fix",
